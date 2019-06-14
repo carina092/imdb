@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5% !important;
+}
+
+body {
+  font-family: $helvetica;
+  font-size: $normal;
+  font-weight: normal;
+  background-color: $lightgrey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $gothica1;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 100%;
+}
+
+.headerContainer {
+  max-width: 1600px;
+  width: 100%;
+  .topHeader {
+    height: 16rem;
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    .logo {
+      background-image: url('./assets/images/logo.jpg');
+      height: 10rem;
+      width: 14.5rem;
+      border-radius: $three;
+      -webkit-border-radius: $three;
+      -moz-border-radius: $three;
+    }
+    .nav { // Todo: Change span in navigation for router links and adjust CSS accordingly.
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      span {
+        padding: 2.5rem;
+        color: $white;
+        font-family: $gothica1;
+        font-size: $normal;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:active,
+        &:hover {
+          color: $yellow;
+        }
+      }
+      .active { // Todo: Remove.
+        color: $yellow;
+      }
+    }
+    .userInfo {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .userSettings {
+        padding: 0 2rem 0 0;
+      }
+      .userProfile { // Todo: Change background color for image.
+        //background-image: url('');
+        background-color: $black;
+        height: 4.5rem;
+        width: 4rem;
+        border-radius: $fifteen;
+        -webkit-border-radius: $fifteen;
+        -moz-border-radius: $fifteen;
+      }
+    }
+  }
+  .slider { // Todo: Find a way to retrieve slider images + change the slider opacity color.
+    background: url('http://www.dailypublic.com/sites/default/files/2015/Oct/THE%20MARTIAN_0.jpg') no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.2);
+    width: 100%;
+    h1 {
+      font-family: $raleway;
+      font-size: $huge;
+      font-weight: 800;
+      letter-spacing: 0.5rem;
+    }
+    .sliderContent {
+      max-width: 1125px;
+      width: 100%;
+      padding: 6.5rem 0 10rem 0;
+      margin: 0 auto;
+      button {
+        height: 5rem;
+        width: 17.5rem;
+        background-color: $yellow;
+        border-radius: $twenty;
+        -webkit-border-radius: $twenty;
+        -moz-border-radius: $twenty;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

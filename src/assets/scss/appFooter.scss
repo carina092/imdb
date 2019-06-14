@@ -1,0 +1,55 @@
+.footerContainer {
+  max-width: 1600px;
+  width: 100%;
+  background-color: $white;
+  .footer {
+    display: flex;
+    flex-direction: row;
+    height: 11rem;
+    padding: 5rem 3rem 4rem 3rem;
+    border-bottom: 0.1rem solid $lightestgrey;
+    .logo { // Todo: Change typography for image.
+      float: left;
+      width: 25%;
+      font-family: $gothica1;
+      font-size: $normal;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      color: $darkergrey;
+    }
+    .socials {
+      margin: 0 auto;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      span { // Remove
+        background-color: black;
+        width: 2rem;
+        height: 2rem;
+        margin: 0rem 2.5rem;
+      }
+    }
+    .copyright {
+      float: right;
+      width: 25%;
+      text-align: right;
+      font-family: $gothica1;
+      font-size: $normal;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      color: $darkergrey;
+    }
+  }
+  .footerMenu {
+    height: 5rem;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-family: $gothica1;
+    font-size: $small;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: $yellow;
+  }
+}
