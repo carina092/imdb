@@ -1,0 +1,86 @@
+.sliderContainer {
+  background: url('http://www.dailypublic.com/sites/default/files/2015/Oct/THE%20MARTIAN_0.jpg') no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.2);
+  width: 100%;
+  h1 {
+    font-family: $raleway;
+    font-size: $huge;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    color: $white;
+  }
+  p.movieGenre {
+    font-family: $gothica1;
+    font-size: $normal;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: $white;
+    text-transform: uppercase;
+    span {
+      padding: 0 2rem 0 0;
+    }
+  }
+  .sliderContent {
+    max-width: 1125px;
+    width: 100%;
+    padding: 6.5rem 0 10rem 0;
+    margin: 0 auto;
+    button.watchTrailer {
+      height: 5rem;
+      width: 20rem;
+      margin: 2.5rem 0 5rem 0;
+      padding: 0 3rem;
+      background-color: $yellow;
+      border-radius: $fourty;
+      -webkit-border-radius: $fourty;
+      -moz-border-radius: $fourty;
+      border: none;
+      cursor: pointer;
+      font-family: $gothica1;
+      font-size: $normal;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      color: $black;
+      text-align: left;
+      .svg-inline--fa {
+        font-size: 2rem;
+        float: right;
+        color: $black;
+      }
+      &:hover {
+        background-color: darken($yellow, 5%);
+      }
+    }
+    h4 {
+      font-family: $gothica1;
+      font-size: $normal;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      color: $white;
+      text-transform: none;
+      margin: 0.5rem 0;
+    }
+    h5 {
+      font-family: $gothica1;
+      font-size: $normal;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      color: $yellow;
+      text-transform: none;
+      margin: 0.5rem 0;
+    }
+  }
+}
+.paginationActiveColor {
+  color: $white;
+}
+.VueCarousel-pagination {
+  position: absolute;
+  left: 0;
+  width: auto !important;
+  text-align: left !important;
+}
+.VueCarousel-dot {
+  display: block !important;
+}
