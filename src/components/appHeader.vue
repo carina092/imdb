@@ -1,9 +1,8 @@
 <template>
   <section class="headerContainer">
     <section class="slider">
-      <section class="sliderContainer">
         <section class="topHeader">
-          <div class="logo"></div>
+          <router-link to="/" exact><div class="logo"></div></router-link>
           <div class="nav">
             <router-link to="/" exact>Movies</router-link>
             <router-link to="#" exact>Celebs &amp; Photos</router-link>
@@ -16,7 +15,6 @@
           </div>
         </section>
         <slider />
-      </section>
     </section>
   </section>
 </template>
