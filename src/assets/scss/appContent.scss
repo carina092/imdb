@@ -1,6 +1,8 @@
 .contentContainer {
+  position: relative;
   max-width: 1125px;
   width: 100%;
+  z-index: 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -12,7 +14,7 @@
   .essentials {
     .topBar {
       width: 100%;
-      height: 12rem;
+      height: 11rem;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -38,7 +40,7 @@
           &:active:before {
             content : "";
             position: absolute;
-            top: 3.5rem;
+            top: 4.5rem;
             left: 0;
             bottom: 0;
             height: 0.1rem;
@@ -50,7 +52,7 @@
             color: $yellow;
           }
         }
-        .active { // Todo: Remove.
+        .active {
           color: $yellow;
         }
       }
@@ -58,7 +60,7 @@
         border-bottom: 0.1rem solid $darkgrey;
       }
     }
-    .filters { // Todo: Check alignment of children.
+    .filters {
       width: 100%;
       height: 11rem;
       padding: 2.5rem 0;
@@ -67,37 +69,17 @@
       justify-content: space-around;
     }
   }
-  .postContainer {
-    padding: 0 5rem;
-    width: 100%;
-    .post { // Todo: Change height/width properties.
-      height: 600px;
-      width: 330px;
-      .postImage { // Todo: Replace background-color with image.
-        background-color: black;
-        height: 477px;
-        width: 330px;
-        span {
-          color: $white;
-        }
-      }
-      .postDetails {
-        display: flex;
-        flex-direction: column;
-        span {
-          text-align: center;
-        }
-      }
-    }
-    .loadMore {
-      height: 6rem;
-      width: 6rem;
-      margin: 0 auto;
-      background-color: black;
-      border-radius: $fourty;
-      -webkit-border-radius: $fourty;
-      -moz-border-radius: $fourty;
-      margin: 8rem auto 7rem auto;
-    }
+  .loadMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto 5rem auto;
+    height: 5rem;
+    width: 5rem;
+    background-color: $yellow;
+    color: $white;
+    border-radius: $fourty;
+    -webkit-border-radius: $fourty;
+    -moz-border-radius: $fourty;
   }
 }
