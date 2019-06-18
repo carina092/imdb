@@ -1,11 +1,13 @@
 <template>
   <section class="footerContainer">
     <div class="footer">
-      <div class="logo">IMDB</div>
+      <div class="logo">
+        <img :src="image.brandlogo">
+      </div>
       <div class="socials">
-        <span>T</span>
-        <span>F</span>
-        <span>I</span>
+        <font-awesome-icon :icon="['fab', 'twitter']" />
+        <font-awesome-icon :icon="['fab', 'facebook-square']" />
+        <font-awesome-icon :icon="['fab', 'instagram']" />
       </div>
       <div class="copyright">1990 - 2005 IMDB.com, INC</div>
     </div>
@@ -16,5 +18,12 @@
 <script>
 export default {
   name: 'appfooter',
+  data() {
+    return {
+      image: {
+        brandlogo: require('../assets/images/brandlogo.png'),
+      },
+    };
+  },
 };
 </script>
