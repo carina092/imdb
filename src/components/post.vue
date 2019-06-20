@@ -24,6 +24,9 @@ export default {
       movies: [],
     };
   },
+  props: {
+    searchString: { type: String, required: true },
+  },
   methods: {
     getMovies(title) {
       this.movies = [];
@@ -34,6 +37,11 @@ export default {
         .then((responseJson) => {
           this.movies = responseJson.Search;
         });
+    },
+  },
+  watch: {
+    searchString(searchString) {
+      this.getMovies(searchString);
     },
   },
   mounted() {

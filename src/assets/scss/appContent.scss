@@ -18,55 +18,166 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding: 4rem 5rem 2rem 5rem;
+      padding: 2.5rem 5rem 4.5rem 5rem;
       border-radius: $five-five;
       -webkit-border-radius: $five-five;
       -moz-border-radius: $five-five;
-      .subNav {
+      &:after {
+        content : "";
+        position: absolute;
+        height: 0.1rem;
+        width: 91%;
+        top: 8.8rem;
+        right: 5rem;
+        bottom: 0;
+        left: 5rem;
         border-bottom: 0.1rem solid $darkgrey;
-        span {
+      }
+      .subNav {
+        margin: 1.5rem 0;
+        a {
           margin: 0 2rem;
           color: $mediumgrey;
           font-family: $gothica1;
           font-size: $normal;
           letter-spacing: 0.1rem;
           text-transform: uppercase;
-          cursor: pointer;
           position: relative;
+          text-decoration: none;
           &:first-child {
-            margin: 0;
+            margin: 0 1rem 0 0;
+          }
+          &:last-child {
+            margin: 0 0 0 1rem;
           }
           &:hover:before,
           &:active:before {
             content : "";
             position: absolute;
             top: 4.5rem;
-            left: 0;
             bottom: 0;
+            left: 0;
             height: 0.1rem;
             width: 100%;
-            border-bottom: 0.2rem solid $lightergrey;
-          }
-          &:active,
-          &:hover {
-            color: $yellow;
+            border-bottom: 0.2rem solid $yellow;
+            z-index: 999;
           }
         }
-        .active {
+        .router-link-exact-active.router-link-active {
           color: $yellow;
+          &:before {
+            content : "";
+            position: absolute;
+            top: 4.5rem;
+            bottom: 0;
+            left: 0;
+            height: 0.1rem;
+            width: 100%;
+            border-bottom: 0.2rem solid $yellow;
+            z-index: 999;
+          }
         }
       }
       .favourites {
-        border-bottom: 0.1rem solid $darkgrey;
+        .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 4rem;
+          width: 10rem;
+          background-color: $yellow;
+          color: $white;
+          font-family: $gothica1;
+          font-size: $normal;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          cursor: pointer;
+          border-radius: $five;
+          -webkit-border-radius: $five;
+          -moz-border-radius: $five;
+          .svg-inline--fa {
+            margin: 0 1rem 0 0;
+          }
+          &:hover {
+            background-color: darken($yellow, 5%);
+          }
+        }
       }
     }
     .filters {
       width: 100%;
       height: 11rem;
-      padding: 2.5rem 0;
+      padding: 2.5rem 5rem;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
+      align-items: center;
+      .listView {
+        margin: 0 1rem 0 0;
+        .svg-inline--fa {
+          color: $grey;
+        }
+      }
+      .gridView {
+        margin: 0 2rem 0 1rem;
+        .svg-inline--fa {
+          color: $mediumgrey;
+        }
+      }
+      .ratingSlider {
+        width: 60%;
+        margin: 0 1.5rem;
+        span {
+          color: $mediumgrey;
+          font-family: $gothica1;
+          font-size: $small;
+        }
+        .range-slider {
+          width: 100%;
+          padding: 0;
+          &:before {
+            content: "";
+            height: 1rem;
+            width: 1rem;
+            background-color: $yellow;
+            position: absolute;
+            margin: 0.5rem 0;
+            border-radius: $twenty;
+            -webkit-border-radius: $twenty;
+            -moz-border-radius: $twenty;
+          }
+        }
+        .range-slider-rail,
+        .range-slider-fill {
+            height: 0.2rem;
+        }
+        .range-slider-rail {
+          color: $darkgrey;
+        }
+        .range-slider-fill {
+          background-color: $yellow;
+        }
+        .range-slider-knob {
+          border: none;
+          box-shadow: none;
+          background-color: $yellow;
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+      .search {
+        margin-top: -0.6rem;
+        border-bottom: 0.2rem solid $darkgrey;
+        input {
+          border: none;
+          background-color: $lightgrey;
+          font-family: $gothica1;
+          font-size: $small;
+        }
+        .svg-inline--fa {
+          color: $darkgrey;
+        }
+      }
     }
   }
   .loadMore {
