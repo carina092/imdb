@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       searchString: 'Harry Potter',
-      sliderValue: '6',
+      sliderValue: 6,
     };
   },
   components: {
