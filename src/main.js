@@ -3,17 +3,21 @@ import Vue from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
+  faBars,
   faCog,
+  faEllipsisH,
   faHeart,
   faPlus,
-  faEllipsisH,
+  faSearch,
+  faStar,
+  faTh,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
   faFacebookSquare,
+  faImdb,
   faInstagram,
   faTwitter,
-  faImdb,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -29,15 +33,19 @@ import router from './router';
 import store from './store';
 
 library.add(
+  faBars,
   faCog,
-  faPlayCircle,
-  faHeart,
-  faPlus,
   faEllipsisH,
   faFacebookSquare,
-  faInstagram,
-  faTwitter,
+  faHeart,
   faImdb,
+  faInstagram,
+  faPlayCircle,
+  faPlus,
+  faSearch,
+  faStar,
+  faTh,
+  faTwitter,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
